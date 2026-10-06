@@ -4,8 +4,6 @@ Application web de gestion de tâches financières développée avec Flask et Po
 
 ## Prérequis
 
-## Prérequis
-
 - Docker Engine 24.0 ou supérieur
 - Docker Compose v2.20 ou supérieur
 - Sous Windows : Docker Desktop récent intégrant Docker Compose v2
