@@ -26,6 +26,10 @@ Les conteneurs ont ensuite été supprimés puis recréés avec Docker Compose.
 Après leur recréation, une requête SELECT sur la table `test_persistence` a permis de retrouver la donnée précédemment enregistrée.
 
 Cela confirme que les données PostgreSQL sont conservées indépendamment du cycle de vie des conteneurs grâce au volume Docker.
+Un second test a été effectué avec la commande `docker compose down -v`. Contrairement à un arrêt classique, l'option `-v` supprime également le volume Docker.
+
+Après le redémarrage des services, la table `test_persistence` n'existait plus. Cela confirme que les données PostgreSQL étaient bien stockées dans le volume Docker et que leur persistance dépend de la conservation de ce volume.
+
 ## 5. Difficulté rencontrée
 Lors de la réalisation du projet, une difficulté rencontrée concernait la connexion à PostgreSQL.
 
